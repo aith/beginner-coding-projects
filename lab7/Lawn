@@ -1,0 +1,17 @@
+#! /bin/bash
+# calculates the time it would take to mow your lawn
+echo "Enter the length and width of the lot, in feet:"
+read w1 h1
+echo "Enter the length and width of the house, in feet:"
+read w2 h2
+netarea=$( echo "scale=5;$w1*$h1-$w2*$h2" | bc)
+echo "The lawn area is $netarea square feet."
+echo "Enter the mowing rate, in square feet per second:"
+read rate
+netarea=$( echo "scale=5;$netarea/$rate" | bc)
+s=$( echo "if($netarea%1>.5){$netarea/1+1}else{$netarea/1}" | bc  )
+m=$( echo "$s/60" | bc  )
+s=$( echo "$s%60" | bc  )
+h=$( echo "$m/60" | bc  )
+m=$( echo "$m%60" | bc  )
+echo "The mowing time is $h hours, $m minutes and $s seconds."

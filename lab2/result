@@ -1,0 +1,21 @@
+/afs/cats.ucsc.edu/users/x/airanman/cs12a/lab2
+
+Access list for public is
+Normal rights:
+  system:operator rlidwk
+  system:authuser rlid
+  system:anyuser rl
+  airanman rlidwka
+
+Access list for private is
+Normal rights:
+  airanman rlidwka
+
+total 7
+-rw-r--r--. 1 airanman users  426 Apr 19 10:24 HelloWorld.class
+drwxr-xr-x. 2 airanman users 2048 Apr 19 10:16 private
+-rwxr--r--. 1 airanman users  193 Apr 19 10:25 prog
+drwxr-xr-x. 2 airanman users 2048 Apr 19 10:16 public
+-rw-r--r--. 1 airanman users  239 Apr 19 10:28 result
+
+Hello, lab2!
